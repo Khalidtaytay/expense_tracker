@@ -1,0 +1,608 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Helvetica', 'Arial', sans-serif;  
+}
+.warning{
+  display: none;
+}
+:root{
+  --move : #5C85E7;
+  --move-hover :#5c86e7b4;
+  --light-move :rgb(92, 133, 231,0.05);
+  --light-dark : #363D47
+}
+#logo{
+  background: #13171D;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: logoPage 0.5s ease-in-out 4.5s forwards;
+}
+.login{
+  background: transparent;
+  width: 100px;
+  position: absolute;
+  transform: translate(-30px,3.5px);
+}
+#logoSvg {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  z-index: 20;
+  animation: logo 2s ease-in-out reverse;
+}
+@keyframes logo {
+to{ 
+    stroke-dashoffset: 400;
+  }
+}
+.underlogo{
+  position: relative;
+  animation: underlogo 1s ease-in-out 3.5s forwards;
+}
+@keyframes underlogo{
+  to{
+    opacity: 0;
+  }
+}
+#textLogo{
+  stroke-dasharray: 50;
+  stroke-dashoffset: 40;
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1px;
+  z-index: 11;
+  opacity: 0;
+  animation: text 4s ease-in-out forwards ;
+}
+
+@keyframes text {
+  80%{
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    
+    stroke: none;
+  }
+  100%{
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    fill: white;
+    stroke: none;
+    opacity: 1;
+  }
+}
+ @keyframes logoPage {
+  to{
+    opacity: 0;
+    display: none;
+  }
+ }
+
+body{
+
+ /*  background: url(../../media/2.jpg);*/ 
+  background-size: cover;
+  display: flex;
+  background: #13171D;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+}
+
+
+
+
+/* Expensive tracker */
+
+
+.SVGS{
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+.SVGSloging{
+  background: transparent;
+  position: absolute;
+  transform: translate(-20px,-0.5px);
+}
+
+
+label{
+  cursor: pointer;
+}
+.Expencetracker{
+  display:flex;
+  justify-content: space-between;
+  width: 90vw;
+  height: 100vh;
+}
+.side1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+  padding-block: 5%;
+}
+.side1 button{
+  background: var(--move);
+  outline: none;
+  border: 1px solid var(--move);
+  color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.1s;
+}
+.side1 button:hover{
+  background: var(--move-hover);
+}
+
+.Statics{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.IncomesStatics,.ExpencesStatics{
+  background: var(--light-move);
+  width: 40%;
+  height: 130px;
+  margin: 1%;
+  padding-left:1%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.IncomesStatics-leftSide{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+}
+.IncomesStatics-leftSide svg{
+  position: absolute;
+}
+.Statics div h4{
+  z-index: 1;
+}
+
+.inputs-infos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15%;
+}
+
+.inputs{
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+#in{
+  background: var(--light-move);
+  border: none;
+  outline: none;
+  color: white;
+  height: 30px;
+  width: 40%;
+  margin: 1%;
+}
+
+.ExpencesIncomes{
+  display: flex;
+  justify-content: space-around;
+}
+.ExpencesIncomes div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.1px;
+}
+.ExpencesIncomes div:nth-child(1){
+  color: #229620;
+}
+.ExpencesIncomes div:nth-child(2){
+  color: #FF0000;
+}
+.money{
+  background: var(--light-move);
+  border-radius: 10px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.balnce{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.1px;
+}
+.balnce h1 {
+  color: #5C85E7;
+}
+.balnce h2{
+  color: #229620;
+}
+
+
+
+
+.side2{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 5%;
+}
+.profileInfos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+}
+.profile button {
+  background: var(--move);
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 15%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.1s;
+}
+.profile button:hover{
+  background: var(--move-hover);
+}
+.Transistions {
+  width: 100%;
+  height: 65%;
+}
+.Transistions div{
+  overflow-y: scroll;
+  height: 80%;
+  width: 100%;
+}
+#uniqueTransistion{
+  height: 16.5%;
+  position: relative;
+  width: 95%;
+
+  list-style: none;
+  background: var(--light-move);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1%;
+  padding-left: 2%;
+  padding-right:  10%;
+}
+#date{
+  opacity: 0.8;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Customize the scrollbar */
+.Transistions div::-webkit-scrollbar {
+  width: 12px; /* Width of the entire scrollbar */
+}
+
+.Transistions div::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+}
+
+.Transistions div::-webkit-scrollbar-thumb {
+  background-color: #363d477f; /* Color of the thumb */
+  border-radius: 10px; /* Roundness of the thumb */
+   /* Padding around the thumb */
+}
+
+.Transistions div::-webkit-scrollbar-thumb:hover {
+  background: #55555576; /* Color of the thumb when hovered */
+}
+
+
+
+
+
+
+
+/* Authantification */
+
+.Authantification{
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-move);
+  width: 100dvw;
+  height: 100dvh;
+}
+.AuthLeftSide{
+  width: 40%;
+  background: var(--light-move);
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2%;
+}
+.AuthLeftSide h1{
+  font-size: 50px;
+  top: 20%;
+  left: 5%;
+  position: absolute;
+  display: flex;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.AuthLeftSide h1 div:nth-child(1){
+  animation: title 3s ease-in-out 4.5s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h1 div:nth-child(2){
+  animation: title 3s ease-in-out 4.75s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h1 div:nth-child(3){
+  animation: title 3s ease-in-out 5s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h1 div:nth-child(4){
+  animation: title 3s ease-in-out 5.25s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+
+
+@keyframes title {
+to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.AuthLeftSide h2 div:nth-child(1){
+  animation: title 2s ease-in-out 7.25s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h2 div:nth-child(2){
+  animation: title 2s ease-in-out 7.35s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h2 div:nth-child(3){
+  animation: title 2s ease-in-out 7.45s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h2 div:nth-child(4){
+  animation: title 2s ease-in-out 7.55s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h2 div:nth-child(5){
+  animation: title 2s ease-in-out 7.65s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+.AuthLeftSide h2 div:nth-child(6){
+  animation: title 2s ease-in-out 7.75s forwards;
+  opacity: 0;
+  scale: 0.9;
+  margin-right: 2%;
+}
+
+.AuthLeftSide h2{
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 35px;
+  position: absolute;
+  top: 32%;
+  display: flex;
+}
+.AuthLeftSide p{
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  width: 500px;
+  top: 47%;
+  line-height: 25px;
+  animation: title 3s ease-in-out 8s forwards;
+  opacity: 0;
+  scale: 0.9;
+}
+.AuthRightSide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  
+}
+.Ending-bar{
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  color: gray;
+}
+
+
+
+
+
+
+/* Login */
+.Login{
+  background: rgb(93, 133, 231,0.15);
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80%;
+  position: relative;
+  animation: title 1s ease-in-out 4.5s forwards;
+  opacity: 0.5;
+}
+
+.Login button {
+  width: 80%;
+  height: 10%;
+  border-radius: 5px;
+  border: none;
+  background: var(--move);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  transition: 0.1s;
+}
+.Login button:hover{
+  background: var(--move-hover);
+}
+#GoogleButton{
+  background: rgba(255, 255, 255, 0.95);
+  color: #4285F4;
+  transition: 0.1s;
+}
+#GoogleButton:hover{
+  background: rgba(255, 255, 255, 0.80);
+}
+#Or{
+  position: relative;
+}
+#Or::before{
+  background: rgb(225, 225, 225,0.5);
+  content: '';
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  bottom: 7px;
+  left: 30px;
+  display: flex;
+}
+#Or::after{
+  background: rgb(225, 225, 225,0.5);
+  content: '';
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  bottom: 7px;
+  right: 30px;
+  display: flex;
+}
+.SignIn,.NamePic{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.SignIn p{
+  font-size: 11px;
+}
+
+
+.Login input, .SignIn input, .NamePic input {
+  color: rgb(225, 225, 225,0.5);
+  margin: 1%;
+  width: 80%;
+  height: 10%;
+  border: none;
+  outline: none;
+  background: rgb(225, 225, 225,0.04);
+}
+#file{
+  display: none;
+}
+.upload{
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  background: url(https://static.vecteezy.com/system/resources/previews/020/213/738/original/add-profile-picture-icon-upload-photo-of-social-media-user-vector.jpg);
+  background-size: 100%;
+  background-position: center;
+  border-radius: 50%;
+  
+}
+.fa-circle-left{
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--move);
+}
+.fa-circle-left:hover{
+  color: var(--move-hover);
+}
+.fa-delete-left{
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.1s;
+  position: absolute;
+  right: 1%;
+}
+.fa-delete-left:hover{
+  opacity: 0.2;
+}
+.Login span{
+  color: var(--move);
+  cursor: pointer;
+}
+
+@media (max-width:800px){
+  .warning{
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    width: 100%;
+  }
+  .Authantification{
+    display: none;
+  }
+  .Expencetracker{
+    display: none;
+  }
+}
