@@ -456,8 +456,10 @@ to{
 }
 .Ending-bar{
   width: 100%;
+  font-size: 10px;
   position: absolute;
   bottom: 1%;
+  opacity: 0.5;
   text-align: center;
   color: gray;
 }
